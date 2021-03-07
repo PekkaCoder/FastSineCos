@@ -1,5 +1,5 @@
 # FastSineCos
-These classes calculate fast mathematical Sine/Cos for limited accuracy. If you need more speed for calculating Sine and reduced accuracy for std::sin() is ok then this class can be 80%-320% faster than std::sin() (according to my current tests - which might be faulty, so if you want to be sure do your own tests :)).
+This class calculates fast mathematical Sine for a limited accuracy. If you need more speed for calculating Sine and reduced accuracy for std::sin() is ok then this class can be 80%-320% faster than std::sin() (according to my current tests - which might be faulty, so if you want to be sure do your own tests :)).
 
 FastSin is a class to calculate fast mathematical Sine for a given angle in radians.
 It uses MiniMax polynomial approximation and the degree of the polynomial approximation can be chosen. Smaller degree gives faster results.
