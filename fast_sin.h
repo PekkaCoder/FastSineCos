@@ -78,7 +78,7 @@ public:
     T operator()(T angle);
 
 private:
-    // constats used for speedy calculation of the (next) approximation
+    // constants used for speedy calculation of the (next) approximation
     inline const static double FAST_SIN_PI{ 3.141592653589793 };
     inline const static double PI_DIV_2{ FAST_SIN_PI / 2.0 };
     inline const static double PI_MULT_3_DIV_2{ FAST_SIN_PI * 3.0 / 2.0 };
@@ -139,12 +139,12 @@ T FastSin<T, Degree>::operator()(T angle)
         const double div = angle / PI_MULT_2; // quite slow
         m_previousFullCyckles = div;
         m_previousFullCycklesAngle = m_previousFullCyckles * PI_MULT_2;
-        angleShort = (div - (int)div) * PI_MULT_2; // quite slow
+        angleShort = (div - static_cast<int>(div)) * PI_MULT_2; // quite slow
     }
-    // The polynomial approximation only knows the values from the first section of the radians unit
-    // circle (0 - Pi/2), so if the angle is on the other 3 sections of the unit circle (Pi/2 - 2*Pi) we need
-    // find the corresponding value on the first section. Note: If we know all the values 
-    // from the first unit circle section, then we can get the value also for other sections 
+    // The polynomial approximation only knows the values from the first quarter section (0 - Pi/2) of the radians unit
+    // circle (0 - 2*Pi), so if the angle is on the other 3 quarter sections of the unit circle (Pi/2 - 2*Pi) we need
+    // to find the corresponding value (or its negation value) on the first section. Note: If we know all the values 
+    // from the first quarter or the unit circle, then we can get the value also for other sections 
     // (Pi/2 - 2*Pi).
     double sign = 1.0;
     if (angleShort > PI_DIV_2 && angleShort <= FAST_SIN_PI)
