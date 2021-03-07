@@ -93,7 +93,7 @@ private:
 };
 
 template<typename T, int Degree>
-T FastSin<T, Degree>::operator()(T angle)
+T FastSin<T, Degree>::operator()(const T angle)
 {
     double angleShort;
     // If previous angle is "near" (near is about 2*Pi) use it as an 
