@@ -46,11 +46,10 @@
 // Can be 7 or 9 (9 is more accurate).
 // Maximum error for Degree 7: 9.39101e-07
 // Maximum error for Degree 9: 5.31399e-09
-// These errors are tested by running all the values 
 // According to my testings FastSin seems to be 80%-340% faster than std::sin(). 
-//   NOTE: FastSin is only fast if you call it call it so that your consequent angles
-// are close (about 2*Pi) to each others. If you pass random angles it should still be
-// faster than std::sin() but not much. 
+//   NOTE: FastSin is only fast if you call it so that your consequent angles
+// are close (about 2*Pi) to each others. So for example calling with angles: 1.521, 1.540, 1.600, 1.425.
+// If you pass random angles it should still be faster than std::sin() but not much. 
 // So FastSin is good for calculating rotation angles because when rotating normally consequent
 // angles are close each others.
 //
