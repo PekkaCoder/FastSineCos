@@ -68,7 +68,7 @@
 // FastSin<float> fastSin4;
 // auto sin4 = fastSin1(1.85111);
 //
-template<typename T = double, int Degree = 9>
+template<typename T = double, int Degree = 7>
 class FastSin
 {
 public:
