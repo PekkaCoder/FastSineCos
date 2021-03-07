@@ -14,7 +14,7 @@ According to my testings FastSin seems to be 80%-340% faster than std::sin().
 NOTE: FastSin is only fast if you call it so that your consequent angles
 are close (about 2Pi) to each others. So for example calling with angles: 1.521, 1.540, 1.600, 1.425. If you pass random angles consequently it should still be
 faster than std::sin() but not much. 
-So FastSin is good for calculating rotation angles because when when rotating normally consequent
+So FastSin is good for calculating rotation angles because when rotating normally consequent
 angles are close to each others.
 
 Usage example 1:
