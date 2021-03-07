@@ -6,7 +6,7 @@ It uses MiniMax polynomial approximation and the degree of the polynomial approx
 
 Currently two degrees (7 and 9) can be used, but it is easy to add more degrees.
 
-Maximum error for Degree 7: 9.39101e-07
+Maximum error for Degree 7: 9.39101e-07<br/>
 Maximum error for Degree 9: 5.31399e-09
 
 According to my testings FastSin seems to be 80%-340% faster than std::sin(). 
